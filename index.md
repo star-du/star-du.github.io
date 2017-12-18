@@ -4,9 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](   {% for post in site.posts %}
-    {{ site.baseurl }}{{ post.url }}">{{ post.title }}
-   {% endfor %}).
+[Link to another page](test.md).
 
 There should be whitespace between paragraphs.
 
