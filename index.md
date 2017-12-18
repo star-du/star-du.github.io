@@ -5,7 +5,7 @@ layout: default
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](   {% for post in site.posts %}
-       <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {{ site.baseurl }}{{ post.url }}">{{ post.title }}
    {% endfor %}).
 
 There should be whitespace between paragraphs.
