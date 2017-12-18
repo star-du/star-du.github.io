@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./_posts/2017_12_28.html).
+[Link to another page]({{ site.baseurl }}{{ post.url }}).
 
 There should be whitespace between paragraphs.
 
