@@ -1,2 +1,5 @@
-url:"https://star-du.github.io/"
+title: Merlot theme
+description: Merlot is a theme for GitHub Pages.
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-merlot
