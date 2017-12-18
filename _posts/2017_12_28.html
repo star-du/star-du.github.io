@@ -1,6 +1,6 @@
 ---
 　　layout: default
-　　title: hello world
+　　title: Dive into python 3 chapter 1
 　　---
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="container-fluid bg-1" id="part1">
-<h2 style="font-family:Lucida Console">Dive into python 3 chapter 1</h2>
+<h2 style="font-family:Lucida Console">{{ page.title }}</h2>
 1. keyword function always goes after a none keyword argument.<br>
 2. every function deserves a docstring, which must be the first thing destined
 in a function.<br>
@@ -36,5 +36,6 @@ it is passed to the calling function. if the exception is
 never handled, your program will crash and Python will print
 a <i>'traceback'</i> to standard error.<br>
 6. unlike C, python doesn't support inline assignment.<br>
+<p>{{ page.date | date_to_string }}</p>
 </body>
 </html>
