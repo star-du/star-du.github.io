@@ -1,42 +1,9 @@
 ---
-　　layout: default
-　　title: Dive into python 3 chapter 1
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  <title>STAR du</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  .bg-1 {
-        background-color:#4286f4;
-        color: #ffffff;
-    }
-  .container-fluid{
-        padding:70px 10% 70px 10%;
-    }
-  </style>
-</head>
-<body>
-<div class="container-fluid bg-1" id="part1">
-<h2 style="font-family:Lucida Console">{{ page.title }}</h2>
-1. keyword function always goes after a none keyword argument.<br>
-2. every function deserves a docstring, which must be the first thing destined
-in a function.<br>
-3. when importing a module, python looks in directories defined in
-sys. path. By using <code>sys.path.insert()</code> you'll add a new directory,
- but the effect lasts as long as python is running<br>
-4. indenting starts a block and unindenting ends it.<br>
-5. traceback: if one function doesn't handle an exception,
-it is passed to the calling function. if the exception is
-never handled, your program will crash and Python will print
-a <i>'traceback'</i> to standard error.<br>
-6. unlike C, python doesn't support inline assignment.<br>
-<p>{{ page.date | date_to_string }}</p>
-<a href="{{ site.baseurl }}/index.html">Go back</a>
-</body>
-</html>
+
+## Welcome to another page
+
+this is a test file.
+
+[back](./)
