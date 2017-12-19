@@ -1,6 +1,10 @@
+# Author's note
+The site is made with `GitHubPages`.   
+Currently, it's a simple notebook by _star-du_.
+
+
 # The Merlot theme
 
-[![Build Status](https://travis-ci.org/pages-themes/merlot.svg?branch=master)](https://travis-ci.org/pages-themes/merlot) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-merlot.svg)](https://badge.fury.io/rb/jekyll-theme-merlot)
 
 *Merlot is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/merlot), or even [use it today](#usage).*
 
