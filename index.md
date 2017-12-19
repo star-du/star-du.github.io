@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 # [](#header-1) Article lists
-[{{ note1.title }}](./note1.md).
+[Dive into python 3 chapter 1](./note1.md).
 
 
 # [](#header-1)Header 1
