@@ -3,7 +3,7 @@ layout: default
 title: Dive into python 3 chapter 1
 ---
 
-## {{page.title}}
+## {{ page.title }}
 
 1. keyword function always goes after a none keyword argument.   
 2. every function deserves a docstring, which must be the first thing destined
