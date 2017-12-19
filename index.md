@@ -5,8 +5,9 @@ layout: default
 [//]: # (Text can be **bold**, _italic_, or ~~strikethrough~~.)
 
 # [](#header-1) Article lists
-[Dive into python 3 chapter 1](./note1.md)
-[Dive into python 3 chapter 2](./note2.md)
+*   [Dive into python 3 chapter 1](./note1.md)
+*   [Dive into python 3 chapter 2](./note2.md)
+
 * * *
 
 ## [](#header-2)A quote I wish to share
