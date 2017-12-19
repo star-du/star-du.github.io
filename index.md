@@ -2,12 +2,23 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+[//]: # (Text can be **bold**, _italic_, or ~~strikethrough~~.)
+
 # [](#header-1) Article lists
-[Dive into python 3 chapter 1](./note1.md).
+[Dive into python 3 chapter 1](./note1.md)
+
+* * *
+
+## [](#header-2)A quote I wish to share
+
+> This is a quote I enjoy.
+>
+> I refuse to accept this. I believe that man will not merely endure: he will prevail. He is immortal, not because he alone among creatures has an inexhaustible voice, but because he has a soul, a spirit capable of compassion and sacrifice and endurance. The poet's, the writer's, duty is to write about these things. It is his privilege to help man endure by lifting his heart, by reminding him of the courage and honor and hope and pride and compassion and pity and sacrifice which have been the glory of his past. The poet's voice need not merely be the record of man, it can be one of the props, the pillars to help him endure and prevail.
+
+William Faulkner's speech at the Nobel Banquet at the City Hall in Stockholm, December 10, 1950 
 
 
-# [](#header-1)Header 1
+[comment]: <# [](#header-1)Header 1
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
@@ -117,4 +128,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ```
 The final element.
-```
+```>
