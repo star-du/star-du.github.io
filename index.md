@@ -3,12 +3,9 @@ layout: default
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
+# [](#header-1) Article lists
+[Dive into Python char1](./note1.md).
 
-[Link to another page](./test.md).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # [](#header-1)Header 1
 
@@ -16,7 +13,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ## [](#header-2)Header 2
 
-> This is a blockquote following a header.
+> This is a quote I enjoy.
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
