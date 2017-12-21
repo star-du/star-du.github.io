@@ -25,14 +25,30 @@ title: Dive into python 3 chapter 2
 4. four ways to add items in a list:  
 `a_list = a_list + [2.0, 3]`:creates a second list in memory and assigned to the existing variable `a_list`; `append()` adds one new item and `extend()` method takes a list as the argument, and adds each one of the item to the original list;`insert( , )`insert an item into a indexed position.      
 _note that_
-```   
+```
+>>>a_list+['g','h']
+>>>a_list
+['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']   
 >>> a_list.append(['g', 'h', 'i'])    
 >>> a_list    
 ['a', 'b', 'c', 'd', 'e', 'f', ['g', 'h', 'i']]
 >>> len(a_list)
 7
 ```
-5. useful list methods include `count()`,`in list_name` and `index()`,the last one returns the index of first occurence and will raise an exception (`ValueError`) if there is no such item;
-`remove()` is available, while `pop()` removes the item and returns it. 
+5. useful list methods include `count()`,`in list_name` and `index()`,the last one returns the index of first occurence and will raise an exception (`ValueError`) if there is no such item;`del` (takes the _index_) and `remove()` (takes the _index_) is available, while `pop()` removes the item and returns it.
+6. tuple in use:  
+in `sqlite`, if you want to use values from Python variables,Python request that
+>
+ Put `?` as a placeholder wherever you want to use a value, and then provide a tuple of values as the second argument to the cursor’s execute() method.
+
+ example here:
+ ```
+ purchases = [('2006-03-28', 'BUY', 'IBM', 1000, 45.00),
+              ('2006-04-05', 'BUY', 'MSFT', 1000, 72.00),
+              ('2006-04-06', 'SELL', 'IBM', 500, 53.00),
+             ]       
+c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
+```
+
 
 [back](./)
