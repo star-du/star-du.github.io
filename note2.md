@@ -49,6 +49,15 @@ in `sqlite`, if you want to use values from Python variables,Python request that
              ]       
 c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
 ```
-
-
+7. to create a tuple with one item, we need a comma after that item.    
+```asign name to a number range of values:   
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)  
+```
+8. an empty set should be `>>> a_set = set() `, rather than a pair of `{}`.
+9. The `update()` method takes one argument, a set (also list and tuple), and adds all its members to the original set. And a tuple has no duplicates.  
+10. If you call the `discard()` method with a value that doesn’t exist in the set, it does nothing. No error; it’s
+just a no-op. But for the `remove()`, such operation would raise a `KeyError` exception.
+11. The `union()` method returns a new set containing all the elements that are in either set.    
+ The `intersection()` method returns a new set containing all the elements that are in both sets.   
+ The `difference()` method returns a new set containing all the elements that are in a_set but not b_set.
 [back](./)
