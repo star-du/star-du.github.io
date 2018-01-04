@@ -8,6 +8,8 @@ layout: default
 *   [Dive into python 3 chapter 1](./note1.md)
 *   [Dive into python 3 chapter 2](./note2.md)
 *   [Dive into python 3 chapter 3](./note3.md)
+*   [Integral assignment experiences](./note_extra.md)
+*   [MFC project enhancements](./MFC_project_enhancements.md)
 
 * * *
 
