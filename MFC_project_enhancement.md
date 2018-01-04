@@ -20,7 +20,7 @@ BOOL CManagerDlg::PreTranslateMessage(MSG* pMsg)
 	return CDialog::PreTranslateMessage(pMsg);
 }
 ```
-4. to change the font of differnt text, use the `SetFont` in `WMInitDialog`
+4. to change the fonts of differnt text (rather than change all of them), use the `SetFont` in `WMInitDialog`
 ```
 CFont * f;
 	f = new CFont;
