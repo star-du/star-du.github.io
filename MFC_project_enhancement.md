@@ -1,3 +1,9 @@
+---
+layout: default
+title: MFC project enhancements
+---
+
+## {{ page.title }}
 1. when nothing is ordered, the order will not be rocorded.
 2. add an option of getting today's bill only in the manager mode.
 ```
