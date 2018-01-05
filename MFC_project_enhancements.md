@@ -55,6 +55,19 @@ and we have to change the return value of `OnInitDialog()` to `FALSE`, as `MSDN`
 >
 >The application can return 0 only if it has explicitly set the input focus to one of the controls in the dialog box.
 
+6. change the color of text:
+1.add declaration of m_brush `CBrush m_brush` in Dlg.h
+2.```if(pWnd->GetDlgCtrlID()==IDC_EDIT1)//如果是编辑框
+    {   pDC->SetTextColor(RGB(255,0,0));//设置编辑框字体的颜色
+        pDC->SetBkColor(RGB(255,255,0));//设置字体背景颜色
+        CFont font;
+        font.CreatePointFont(100,"华文楷体");
+         pDC->SelectObject(&font);//设置字体        
+        return m_brush;}```
+we do so because MFC hints that  
+`Return a different brush if the default is not desired`
+7. everytime when opening each sub_dialog, the `OnInitDialog` function would show the current order status of each dish.
+To do this, just edit the m_password (a string which is the variable for the IDC_EDIT1), and then `UpdateData(FALSE)`
 
 * **
 <span style="font-family:Arial">
@@ -63,4 +76,24 @@ PDC (设备环境对象)
 GDI的派生类有：CBitmap, CBrush, CFont....
 上述`4`中的例子， `f`是CFont这个类创建的一个动态对象，在MFC中，无需显式的delete这些动态对象。
 C++中，类的定义放在.h文件中，而.cpp文件存放类外定义的成员函数
+上述6中的方法可以更改某个控件的属性
+读取csv的方法：
+```file.Open(_T("../main./order.csv"),CFile::modeRead);
+CString str;
+while(file.ReadString(str))
+	{CString substr[10];
+	int count=0;
+	int index = str.Find(_T(","));
+	CString stmp;
+	while (index != -1 && count<9)
+	{
+	substr[count++] = str.Left(index);
+	str=str.Right(str.GetLength()-index-1);
+	index = str.Find(_T(","));
+	}
+	substr[count++]=str;
+	}
+	file.Close();
+```
+以上会在每个外层while循环内部，将各个单元格（此处不超过10个）的内容以字符串的形式储存在substr数组的各个元素中，在实际应用中，需要对字符串再做处理（如使用`atoi()`函数将字符串转化为整数）。
 </span>
