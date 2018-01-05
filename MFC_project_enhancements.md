@@ -68,7 +68,20 @@ we do so because MFC hints that
 `Return a different brush if the default is not desired`
 7. everytime when opening each sub_dialog, the `OnInitDialog` function would show the current order status of each dish.
 To do this, just edit the m_password (a string which is the variable for the IDC_EDIT1), and then `UpdateData(FALSE)`
+8. for the background picture, add the following code into `onpaint()`:
+```
+		CPaintDC   dc(this);     
+    CRect   rect;
+    GetClientRect(&rect);//get the length and the width of the 	window.                                        
+    CDC   dcBmp;                                           
+    dcBmp.CreateCompatibleDC(&dc);                         
+    CBitmap   bmpBackground;     
+    bmpBackground.LoadBitmap(IDB_BITMAPBG);                 
+    BITMAP m_bitmap;                                                     
+    bmpBackground.GetBitmap(&m_bitmap);                    
+    CBitmap   *pbmpOld=dcBmp.SelectObject(&bmpBackground);
 
+```
 * **
 <span style="font-family:Arial">
 GDI（图形设备接口）
