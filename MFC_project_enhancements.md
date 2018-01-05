@@ -46,3 +46,21 @@ CFont * f;
     _T("Arial")); // lpszFac   
 	GetDlgItem(IDC_BUTTON1)->SetFont(f);
 ```
+5. to set the focus on the password edit bar (so that the user can start entering password without having to select it), add the following:
+```
+GetDlgItem(IDC_EDIT1)->SetFocus();
+```
+and we have to change the return value of `OnInitDialog()` to `FALSE`, as `MSDN` explains
+>If OnInitDialog returns nonzero, Windows sets the input focus to the first control in the dialog box.
+>
+>The application can return 0 only if it has explicitly set the input focus to one of the controls in the dialog box.
+
+
+* **
+<span style="font-family:Arial">
+GDI（图形设备接口）
+PDC (设备环境对象)
+GDI的派生类有：CBitmap, CBrush, CFont....
+上述`4`中的例子， `f`是CFont这个类创建的一个动态对象，在MFC中，无需显式的delete这些动态对象。
+C++中，类的定义放在.h文件中，而.cpp文件存放类外定义的成员函数
+</span>
