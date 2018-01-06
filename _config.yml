@@ -1,5 +1,5 @@
 # Site settings
-title: Hanuman
+title: Star Du's note
 description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
 cover: assets/images/radhakrishna.jpg
 logo: assets/images/logo.png
@@ -38,8 +38,8 @@ plugins:
 # Settings for rake task
 safe: False
 lsi: False
-username: star-du #github username
-repo: star-du.github.io #github repository
+username: samanyougarg #github username
+repo: hanuman #github repository
 branch: master #branch
 relative_source: ../hanuman/ #source directory
 destination: ../hanuman-pages/ #destination directory
