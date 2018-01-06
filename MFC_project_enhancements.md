@@ -70,7 +70,7 @@ we do so because MFC hints that
 To do this, just edit the m_password (a string which is the variable for the IDC_EDIT1), and then `UpdateData(FALSE)`
 8. for the background picture, add the following code into `onpaint()`:
 ```
-		CPaintDC   dc(this);     
+    CPaintDC   dc(this);     
     CRect   rect;
     GetClientRect(&rect);//get the length and the width of the 	window.                                        
     CDC   dcBmp;                                           
@@ -80,10 +80,10 @@ To do this, just edit the m_password (a string which is the variable for the IDC
     BITMAP m_bitmap;                                                     
     bmpBackground.GetBitmap(&m_bitmap);                    
     CBitmap   *pbmpOld=dcBmp.SelectObject(&bmpBackground);
-
 ```
 * **
-<span style="font-family:Arial">
+
+
 GDI（图形设备接口）
 PDC (设备环境对象)
 GDI的派生类有：CBitmap, CBrush, CFont....
@@ -91,6 +91,7 @@ GDI的派生类有：CBitmap, CBrush, CFont....
 C++中，类的定义放在.h文件中，而.cpp文件存放类外定义的成员函数
 上述6中的方法可以更改某个控件的属性
 读取csv的方法：
+
 ```file.Open(_T("../main./order.csv"),CFile::modeRead);
 CString str;
 while(file.ReadString(str))
@@ -109,5 +110,4 @@ while(file.ReadString(str))
 	file.Close();
 ```
 以上会在每个外层while循环内部，将各个单元格（此处不超过10个）的内容以字符串的形式储存在substr数组的各个元素中，在实际应用中，需要对字符串再做处理（如使用`atoi()`函数将字符串转化为整数）。
-</span>
 [back](./)
