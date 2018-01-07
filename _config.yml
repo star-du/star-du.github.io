@@ -4,7 +4,7 @@
 
 title: Star' s note                             # used in <title> tag & site header
 author: Star Du                        # used in a <meta> tag & /feed.xml
-description: >A guy interested in too many things.
+description: ">A guy interested in too many things."
 slogan: Hack!Hack!Hack!                           # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
