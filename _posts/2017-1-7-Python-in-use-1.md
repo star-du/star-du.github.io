@@ -1,7 +1,7 @@
 ---
 layout: default
 teaser: How to build an Integral calculator with Python (insanely easy!)...plus some experiences of real-life python programming.
-title: Dive into python 3 chapter 2
+title: Python in use: math
 category: coding
 tags: [python, note-taking]
 ---
