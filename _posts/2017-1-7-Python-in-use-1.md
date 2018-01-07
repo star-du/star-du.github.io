@@ -1,12 +1,10 @@
 ---
 layout: post
-teaser: How to build an Integral calculator with Python (insanely easy!)...plus some experiences of real-life python programming.
+teaser: How to build an Integral calculator with Python (insanely easy!)
 title: Python in use: math
 category: coding
 tags: [python, note-taking]
 ---
-
-## {{ page.title }}
 1. the use of `matplotlib.pyplot` is not hard to learn, which can be find on its [official website](https://matplotlib.org/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py). One of the common practices is
 ```
 import matplotlib as plt
@@ -18,4 +16,3 @@ and this returns a graph of the function
 2. any class that has a __call__ method can be called with `instance_name()` just like a function
 3. after importing the built-in module `logging`, the log-level can be altered to determine which kinds of messages shall be shown and which shall not.
 E.g.:`logging.getLogger().setLevel(0)`
-[back](./)
