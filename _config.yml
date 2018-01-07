@@ -9,7 +9,7 @@ A guy interested in too many things.
 slogan: Hack!Hack!Hack!                           # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
-url: http://solana.ryanlue.com              # used by plugins to generate feed.xml and sitemap.xml
+url: https://star-du.github.io/           # used by plugins to generate feed.xml and sitemap.xml
 baseurl: ''                                 # prepended to all absolute filepaths
 repo: https://github.com/rlue/jekyll-solana # used in footer
 
