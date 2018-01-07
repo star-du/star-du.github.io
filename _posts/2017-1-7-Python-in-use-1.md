@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 teaser: How to build an Integral calculator with Python (insanely easy!)...plus some experiences of real-life python programming.
 title: Python in use: math
 category: coding

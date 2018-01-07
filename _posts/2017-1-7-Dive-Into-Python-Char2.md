@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 teaser: What can you do with Python's native data types?
 title: Dive into python 3 chapter 2
 category: coding

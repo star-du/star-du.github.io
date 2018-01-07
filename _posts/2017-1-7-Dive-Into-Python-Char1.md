@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 teaser: A first look into Python
 title: Dive into python 3 chapter 1
 category: coding

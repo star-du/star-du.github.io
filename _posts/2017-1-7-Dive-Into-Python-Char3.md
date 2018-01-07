@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 teaser: A bit more understanding of list, dictionaries...
 title: Dive into python 3 chapter 3
 category: coding
