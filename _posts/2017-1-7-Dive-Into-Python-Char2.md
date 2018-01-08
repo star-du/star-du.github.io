@@ -6,8 +6,6 @@ category: coding
 tags: [python, note-taking]
 ---
 
-## {{ page.title }}
-
 1. operators that are somewhat different: `//` provides integer division, and will return an integer that is closest to it _yet lower_ (it's different when one of the numbers is float );   
 `**`acts as 'raise to the power of';
 ```examples

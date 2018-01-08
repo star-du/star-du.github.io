@@ -6,8 +6,6 @@ category: coding
 tags: [python, note-taking]
 ---
 
-## {{ page.title }}
-
 1. keyword function always goes after a none keyword argument.   
 2. every function deserves a docstring, which must be the first thing destined
 in a function.    
