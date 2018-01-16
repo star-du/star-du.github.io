@@ -94,14 +94,14 @@ and we have to change the return value of `OnInitDialog()` to `FALSE`, as `MSDN`
 6. change the color of text:
 1.add declaration of m_brush `CBrush m_brush` in Dlg.h
 2.
-```if(pWnd->GetDlgCtrlID()==IDC_EDIT1)//如果是编辑框
+~~~if(pWnd->GetDlgCtrlID()==IDC_EDIT1)//如果是编辑框
     {   pDC->SetTextColor(RGB(255,0,0));//设置编辑框字体的颜色
         pDC->SetBkColor(RGB(255,255,0));//设置字体背景颜色
         CFont font;
         font.CreatePointFont(100,"华文楷体");
          pDC->SelectObject(&font);//设置字体        
         return m_brush;}
-				```
+~~~
 we do so because MFC hints that  
 `Return a different brush if the default is not desired`
 7. everytime when opening each sub_dialog, the `OnInitDialog` function would show the current order status of each dish.
