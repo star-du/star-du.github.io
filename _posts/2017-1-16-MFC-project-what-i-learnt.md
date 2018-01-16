@@ -9,8 +9,8 @@ It's part of our assignment to finish a MFC program as the final project for Sof
 ##  basic notions
 GDI（图形设备接口)	\\
 PDC (设备环境对象) \\
-GDI的派生类有：CBitmap, CBrush, CFont....	\\		
-上述`4`中的例子， `f`是CFont这个类创建的一个动态对象，在MFC中，无需显式的delete这些动态对象。	\\		
+GDI的派生类有：CBitmap, CBrush, CFont....\\		
+上述`4`中的例子， `f`是CFont这个类创建的一个动态对象，在MFC中，无需显式的delete这些动态对象。\\		
 C++中，类的定义放在.h文件中，而.cpp文件存放类外定义的成员函数		\\
 下面`6`中的方法可以更改某个控件的属性		
 
