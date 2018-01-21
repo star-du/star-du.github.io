@@ -11,20 +11,27 @@ eg:
 os.chdir('/Users/pilgrim/diveintopython3/examples')
 2. `os.path.join()` will take any number of arguments and `os.path.expanduser()` function will expand a pathname that uses ~ to represent the current user’s home directory.
 3. `os.path.split()` return a tuple of two variables (the directory name and the filename), and `splitext()` will return name and extension.
-4. the `glob` function can be used to get the contents of a directory using wildcards, eg:
-```
->>> import glob
->>> glob.glob('examples/*.xml')
-['examples\\feed-broken.xml',
-'examples\\feed-ns0.xml',
-'examples\\feed.xml']
-```
-5. get metadata of a file:
+4. the `glob` function can be used to get the contents of a directory using wildcards.
+5. get metadata of a file using `os.stat()`[^2]:
 ```
 >>> metadata = os.stat('feed.xml')
 >>> metadata.st_size
 3070
 ```
+6. list and dictionary comprehnsions are easy ways to construct new lists and dictionaries based on given ones.
+
+### A comprehensive usage example
+~~~python
+>>> import os, glob
+>>> glob.glob('*.xml')
+['feed-broken.xml', 'feed-ns0.xml', 'feed.xml']
+>>> [os.path.realpath(f) for f in glob.glob('*.xml') if os.stat(f).st_size > 1000]
+['c:\\Users\\pilgrim\\diveintopython3\\examples\\feed-broken.xml',
+'c:\\Users\\pilgrim\\diveintopython3\\examples\\feed-ns0.xml',
+'c:\\Users\\pilgrim\\diveintopython3\\examples\\feed.xml']
+~~~
 
 [^1]:   
     The function `os.chdir()` changes the current working directory.
+[^2]:   
+    os.stat() return a `stat_result` object (an instance of the class), and st_size stuffs are the attributes of the class. 
