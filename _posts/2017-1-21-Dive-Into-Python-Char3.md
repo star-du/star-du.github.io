@@ -33,7 +33,8 @@ os.chdir('/Users/pilgrim/diveintopython3/examples')
 
 [^1]:   
     The function `os.chdir()` changes the current working directory.
-[^2]:   
+
+[^2]:     
     os.stat() return a `stat_result` object (an instance of the class), and st_size stuffs are the attributes of the class.
 
 [gr1]: https://docs.python.org/3/library/glob.html?highlight=glob#glob.glob
