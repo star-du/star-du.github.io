@@ -9,7 +9,7 @@ I've tried to take a record of things I learn and think about for literally a lo
 
 So, for all things mentioned, I tried with a blog-like stuff to capture things I wish to <s>write</s> type down, up to now, I mainly concentrate on Python stuff and the book *Dive into Python*, and there might be other kinds of articles later on, like reviews or even just some mutterings of myself.
 
-Thanks to help from GitHub Pages and [solana][https://github.com/rlue/jekyll-solana] template
+Thanks to help from GitHub Pages and [solana][sl] template
 
 ## Intro of GitHub Pages #
 GitHub Pages uses a Markdown engine called <dfn>kramdown</dfn> for formatting text posts. kramdown is a superset of Markdown, meaning:
@@ -28,3 +28,4 @@ Consult the official [kramdown syntax reference][kds] for an exhaustive list of 
 [rd]: https://github.com/davidfstr/rdiscount
 [rc]: https://github.com/vmg/redcarpet
 [kds]: https://kramdown.gettalong.org/syntax.html
+[sl]: https://github.com/rlue/jekyll-solana
