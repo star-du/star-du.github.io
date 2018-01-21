@@ -11,7 +11,7 @@ eg:
 os.chdir('/Users/pilgrim/diveintopython3/examples')
 2. `os.path.join()` will take any number of arguments and `os.path.expanduser()` function will expand a pathname that uses ~ to represent the current user’s home directory.
 3. `os.path.split()` return a tuple of two variables (the directory name and the filename), and `splitext()` will return name and extension.
-4. the `glob` function can be used to get the contents of a directory using wildcards.
+4. the <dfn>glob</dfn> function can be used to get the contents of a directory using wildcards. consult glob reference [here][gr1] or [here][gr2].
 5. get metadata of a file using `os.stat()`[^2]:
 ```
 >>> metadata = os.stat('feed.xml')
@@ -34,4 +34,7 @@ os.chdir('/Users/pilgrim/diveintopython3/examples')
 [^1]:   
     The function `os.chdir()` changes the current working directory.
 [^2]:   
-    os.stat() return a `stat_result` object (an instance of the class), and st_size stuffs are the attributes of the class. 
+    os.stat() return a `stat_result` object (an instance of the class), and st_size stuffs are the attributes of the class.
+
+[gr1]: https://docs.python.org/3/library/glob.html?highlight=glob#glob.glob
+[gr2]:https://pymotw.com/3/glob/
