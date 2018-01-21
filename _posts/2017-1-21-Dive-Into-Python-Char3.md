@@ -22,8 +22,9 @@ os.chdir('/Users/pilgrim/diveintopython3/examples')
 5. get metadata of a file:
 ```
 >>> metadata = os.stat('feed.xml')
->>> metadata.st_size 
+>>> metadata.st_size
 3070
 ```
-[^1]:
+
+[^1]:   
     The function `os.chdir()` changes the current working directory.
