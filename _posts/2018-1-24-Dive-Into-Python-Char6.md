@@ -21,7 +21,7 @@ else:
 ## closures and other stuff #
 first dive in some code :
 
-~~~Python
+~~~python
 import re
 def build_match_and_apply_functions(pattern, search, replace):
     def matches_rule(word):
