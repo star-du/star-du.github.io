@@ -20,7 +20,7 @@ the dollar sign(`$`) means “end of the string.” (There is a corresponding ch
 
 ~~~python
 >>> s = '100 BROAD ROAD APT. 3'
->>> re.sub(r'\bROAD\b', 'RD.', s) ④
+>>> re.sub(r'\bROAD\b', 'RD.', s)
 '100 BROAD RD. APT 3'
 ~~~
 `\b` stands for word boundary, and we use `r''` to avoid backslash plague
@@ -56,18 +56,18 @@ after long struggles, one possible solution might be:
 >>> phonePattern.search('(800)5551212 ext. 1234').groups()
 ('800', '555', '1212', '1234')
 ~~~
-`\d{3}` means matching exactly 3 numeric digits, and putting it all in `()` will remember them as a group for later use. similarly `\D` stands for any character except a numeric digit, `*` is '0 or more'(BTW `+` is '1 or more'), so this should mathch the majority of the numbers.       
+`\d{3}` means matching exactly 3 numeric digits, and putting it all in `()` will remember them as a group for later use [^1]. similarly `\D` stands for any character except a numeric digit, `*` is '0 or more'(BTW `+` is '1 or more'), so this should mathch the majority of the numbers.       
 **But** to prevent an extra '(1)' and its interference, we finally resort to remove the beginning `^`...
 
 As I discovered, it was a great mess, so finally we shall put it using VERBOSE Regular Expression, the `re.VERBOSE` can be put as an argument of `compile()`
 
-------
+--------
+--------
 
 ### Postscript
 + ^ matches the beginning of a string.
 + $ matches the end of a string.
 + \b matches a word boundary.
-149
 + \d matches any numeric digit.
 + \D matches any non-numeric character.
 + x? matches an optional x character (in other words, it matches an x zero or one times).
@@ -77,3 +77,7 @@ As I discovered, it was a great mess, so finally we shall put it using VERBOSE R
 + (a|b|c) matches exactly one of a, b or c.
 + (x) in general is a remembered group. You can get the value of what matched by using the groups() method
 of the object returned by re.search.
+
+[^1]:     
+    after grouping, you can refer to the grouped items using `\1` etc.    
+  ———  *which means “hey, that first group you remembered? put it right here.”*
