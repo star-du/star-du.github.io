@@ -1,11 +1,11 @@
 ---
 layout: post
-teaser:
+teaser: Regular Expression, or so-called 're' module
 title: Dive into python 3 chapter 5
 category: coding
 tags: [python, note-taking]
 ---
-## Dive into the field of <def>Regular Expression</def>
+### Dive into the field of Regular Expression
 >Regular expressions are a powerful and (mostly) standardized way of searching, replacing, and parsing text
 with complex patterns of characters.
 
@@ -60,6 +60,9 @@ after long struggles, one possible solution might be:
 **But** to prevent an extra '(1)' and its interference, we finally resort to remove the beginning `^`...
 
 As I discovered, it was a great mess, so finally we shall put it using VERBOSE Regular Expression, the `re.VERBOSE` can be put as an argument of `compile()`
+
+------
+
 ### Postscript
 + ^ matches the beginning of a string.
 + $ matches the end of a string.
