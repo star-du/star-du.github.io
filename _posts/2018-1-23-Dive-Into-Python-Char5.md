@@ -74,7 +74,7 @@ As I discovered, it was a great mess, so finally we shall put it using VERBOSE R
 + x* matches x zero or more times.
 + x+ matches x one or more times.
 + x{n,m} matches an x character at least n times, but not more than m times.
-+ (a|b|c) matches exactly one of a, b or c.
++ `'(a|b|c)'` matches exactly one of a, b or c.
 + (x) in general is a remembered group. You can get the value of what matched by using the groups() method
 of the object returned by re.search.
 
