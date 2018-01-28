@@ -67,7 +67,7 @@ def build_match_and_apply_functions(pattern, search, replace):
         return re.search(pattern, word)
     def apply_rule(word):
         return re.sub(search, replace, word)
-return (matches_rule, apply_rule)
+    return (matches_rule, apply_rule)
 
 rules = []
 
@@ -106,9 +106,9 @@ with that in mind, the following code is a bit easier to understand
 ~~~python
 def rules(rules_filename):
     with open(rules_filename, encoding='utf-8') as pattern_file:
-    for line in pattern_file:
-        pattern, search, replace = line.split(None, 3)
-        yield build_match_and_apply_functions(pattern, search, replace)
+        for line in pattern_file:
+            pattern, search, replace = line.split(None, 3)
+            yield build_match_and_apply_functions(pattern, search, replace)
 
 
 def plural(noun, rules_filename='plural5-rules.txt'):
@@ -120,7 +120,7 @@ def plural(noun, rules_filename='plural5-rules.txt'):
 In each iteration of the for loop in `plural()`, we call the `rules()` which is in essence a generator, the `rules()` yield dynamically built functions (match and apply), and the functions are used in the if sentence.
 Every time it calls the rules(), it just goes on with a new line in the file.
 
-So now, we use the generator to build a function, it overall reduces some costs of time, for you don't have to load a complete list before you even start using `plural()`. But, it always build some same functions if you use the plural() for multiple times. That problems shall remain to be solve.    
+So now, we use the generator to build a function, it overall reduces some costs of startup time, for you don't have to load a complete list before you even start using `plural()`. But, it always build some same functions if you use the plural() for multiple times. That problems shall remain to be solve.    
 IF YOU HAVE TIME: [Dig more about closures][clos]
 
 [re]:https://star-du.github.io/posts/2018-1-23-Dive-Into-Python-Char5
