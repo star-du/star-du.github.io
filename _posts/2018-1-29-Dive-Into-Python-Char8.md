@@ -114,7 +114,7 @@ raw code available [here][raw]
 -----
 
 [^1]:
-    Such as footnotes.
+    Using a generator function will be a bit more complex, but acts out the same
 ~~~python
 def ord_map(a_string):
   for c in a_string:
