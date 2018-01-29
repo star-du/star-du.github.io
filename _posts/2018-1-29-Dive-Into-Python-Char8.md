@@ -113,9 +113,14 @@ raw code available [here][raw]
 
 -----
 
-[^1]:           
-using generator expression is a bit more complex:
-
+[^1]:
+    Such as footnotes.
+~~~python
+def ord_map(a_string):
+  for c in a_string:
+      yield ord(c)    
+gen = ord_map(unique_characters)
+~~~
 
 [dabeaz]:http://www.dabeaz.com/
 [itertools]:https://docs.python.org/3/library/itertools.html
