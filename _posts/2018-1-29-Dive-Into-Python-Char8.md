@@ -53,13 +53,14 @@ And we can pass the generator expression to `tuple()`, `list()` or `set` (no nee
 Besides its simplicity [^1], what's good about using a generator?     
 Using a generator expression instead of a list comprehension can save both C P U and R A M .
 
-
-[^1]:   
-  using generator expression is a bit more complex
+[^1]:     
+using generator expression is a bit more complex
 ~~~python
 def ord_map(a_string):
-    for c in a_string:
-        yield ord(c)    
+  for c in a_string:
+      yield ord(c)    
 gen = ord_map(unique_characters)
 ~~~
+
+
 [dabeaz]:http://www.dabeaz.com/
