@@ -1,6 +1,6 @@
 ---
 layout: post
-teaser:
+teaser: dig more about advanced iterators
 title: Dive into python 3 chapter 8
 category: coding
 tags: [python, note-taking]
