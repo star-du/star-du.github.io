@@ -80,11 +80,12 @@ for more help, see [here][re] and [here][manual]
 + `'(a|b|c)'` matches exactly one of a, b or c.
 + (x) in general is a remembered group. You can get the value of what matched by using the groups() method
 of the object returned by re.search.
+----
 
 [^1]:     
     after grouping, you can refer to the grouped items using `\1` etc.    
   ———  *which means “hey, that first group you remembered? put it right here.”*
 
-  
+
 [re]:https://docs.python.org/3/howto/regex.html
 [manual]:https://docs.python.org/3/library/re.html
