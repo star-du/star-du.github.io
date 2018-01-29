@@ -62,6 +62,9 @@ after long struggles, one possible solution might be:
 As I discovered, it was a great mess, so finally we shall put it using VERBOSE Regular Expression, the `re.VERBOSE` can be put as an argument of `compile()`
 
 --------
+### Resources #
+for more help, see [here][re]
+
 --------
 
 ### Postscript
@@ -81,3 +84,4 @@ of the object returned by re.search.
 [^1]:     
     after grouping, you can refer to the grouped items using `\1` etc.    
   ———  *which means “hey, that first group you remembered? put it right here.”*
+[re]:https://docs.python.org/3/howto/regex.html
