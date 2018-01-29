@@ -63,7 +63,7 @@ As I discovered, it was a great mess, so finally we shall put it using VERBOSE R
 
 --------
 ### Resources #
-for more help, see [here][re]
+for more help, see [here][re] and [here][manual]
 
 --------
 
@@ -85,3 +85,4 @@ of the object returned by re.search.
     after grouping, you can refer to the grouped items using `\1` etc.    
   ———  *which means “hey, that first group you remembered? put it right here.”*
 [re]:https://docs.python.org/3/howto/regex.html
+[manual]:https://docs.python.org/3/library/re.html
