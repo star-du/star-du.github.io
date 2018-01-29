@@ -51,7 +51,7 @@ And we can pass the generator expression to `tuple()`, `list()` or `set` (no nee
 >>> tuple(ord(c) for c in unique_characters)
 (69, 68, 77, 79, 78, 83, 82, 89)
 ~~~
-Besides its simplicity [^1], what's good about using a generator?     
+Besides its simplicity[^1], what's good about using a generator?     
 Using a generator expression instead of a list comprehension can save both C P U and R A M .    
 Next, let's take a look at the `itertools` module, it provides [a variety of][itertools] fun stuff, such as `permutations()`, `combinations` and `product()` (returns iterator containing Cartesian product of two sequences)
 ~~~python
@@ -112,14 +112,15 @@ so the `zero` mentioned above is actually `digits[0]`
 raw code available [here][raw]
 
 -----
-[^1]:       
-  using generator expression is a bit more complex:
-          def ord_map(a_string):
-            for c in a_string:
-                yield ord(c)    
-          gen = ord_map(unique_characters)
 
-
+[^1]:           
+using generator expression is a bit more complex:
+~~~python
+def ord_map(a_string):
+  for c in a_string:
+      yield ord(c)    
+gen = ord_map(unique_characters)
+~~~
 
 [dabeaz]:http://www.dabeaz.com/
 [itertools]:https://docs.python.org/3/library/itertools.html
