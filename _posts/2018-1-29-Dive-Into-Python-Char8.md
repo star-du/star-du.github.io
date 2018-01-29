@@ -109,18 +109,18 @@ digits = tuple(ord(c) for c in '0123456789')
 ~~~
 so the `zero` mentioned above is actually `digits[0]`   
 
-raw code available here
+raw code available [here][raw]
 
 -----
 [^1]:       
   using generator expression is a bit more complex:
-```python
-  def ord_map(a_string):
-    for c in a_string:
-        yield ord(c)    
-  gen = ord_map(unique_characters)
-```
+          def ord_map(a_string):
+            for c in a_string:
+                yield ord(c)    
+          gen = ord_map(unique_characters)
+
 
 
 [dabeaz]:http://www.dabeaz.com/
 [itertools]:https://docs.python.org/3/library/itertools.html
+[raw]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/alphametics.py
