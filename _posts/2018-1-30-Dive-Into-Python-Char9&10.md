@@ -128,6 +128,20 @@ def to_roman(n):
 And every time you use `to_roman` and `from_roman`, you will need those two tables, so remember to add a calling sentence of `build_lookup_tables()`.
 
 see **source code** of [unit_testing][ut] and Roman Numeral utility [example1][roman1] and [example2][roman2]
+### summary
+The author of _Dive Into Python3_ offers his valuable insights:
+>Unit testing is not a replacement for other forms of testing, including functional testing, integration testing, and user acceptance testing. But it is feasible, and it does work, and once you’ve seen it work, you’ll wonder how you ever got along without it.
+
+And there seem to be some universal lessons about unit testing, for a vast range of programming languages you might use
++ Designing test cases that are specific, automated, and independent
++ Writing test cases before the code they are testing
++ Writing tests that test good input and check for proper results
++ Writing tests that test bad input and check for proper failure responses
++ Writing and updating test cases to reflect new requirements
++ Refactoring mercilessly to improve performance, scalability, readability, maintainability, or whatever other -ility
+you’re lacking
+264
+
 
 [ut]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/unit_testing.py
 [roman1]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/roman2.py
