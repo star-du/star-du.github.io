@@ -44,6 +44,8 @@ def from_roman(s):
     '''convert Roman numeral to integer'''
     if not re.search(pattern,s):
         raise InvalidRomanNumeralError("It's not a valid Roman Numeral")
+    if not s:
+        raise InvalidRomanNumeralError("Input string should not be blank.")
     result = 0
     index = 0
     for roman, integer in roman_numeral_map:

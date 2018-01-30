@@ -1,7 +1,7 @@
 ---
 layout: post
 teaser: unit testing is a software testing method to test individual units. By getting familiar with unittest module, we also understand the procedure of modern day programming better.
-title: Dive into python 3 chapter 9
+title: Dive into python 3 chapter 9&10
 category: coding
 tags: [python, note-taking]
 ---
@@ -80,9 +80,55 @@ Ran 9 tests in 0.052s
 
 OK
 ```
-see **source code** of [unit_testing][ut] and [Roman Numeral utility][roman].
 
-For more, go to https://docs.python.org/3/library/unittest.html
+
+For more, go to <https://docs.python.org/3/library/unittest.html>
+### Refactoring
+This chapter is generally about testing and refactoring (i.e. how to enhance your code to make it _better_).
+
+The procedures we now have are that you have your test cases first, and the codes are always behind, so you have to fix. Once your code catches uo to the test cases, you stop coding.
+>The best thing about unit testing is that it gives you the freedom to refactor mercilessly.
+
+Yor always have your complete set of unit tests, so you can change your code completely yet the unit tests will stay the same. So that you can always prove that your new code works just as well as the original ones.
+
+In the example above, you can boldly refactor your code with a totally different method - like, building a map for these 4000 pairs.
+~~~python
+to_roman_table = [None]
+from_roman_table = {}
+
+def build_lookup_tables():
+    def to_roman(n):
+        result = ''
+        for numeral, integer in roman_numeral_map:
+            if n >= integer:
+                result = numeral
+                n -= integer
+                break
+        if n > 0:
+            result += to_roman_table[n]
+        return result
+
+    for integer in range(1, 4000):
+        roman_numeral = to_roman(integer)
+        to_roman_table.append(roman_numeral)
+        from_roman_table[roman_numeral] = integer
+~~~  
+the code above uses a clever bit of programming, you defines a function in the local scope of `build_lookup_tables` function, and as I see it, recursively get a table of numeral-integer pairs
+
+then the original `to_roman` and `from_roman` function only needs to find the corresponding values, and deal with those exceptions now!
+~~~python
+def to_roman(n):
+    '''convert integer to Roman numeral'''
+    if not (0 < n < 4000):
+        raise OutOfRangeError('number out of range (must be 1..3999)')
+    if int(n) != n:
+        raise NotIntegerError('non-integers can not be converted')
+    return to_roman_table[n]
+~~~
+And every time you use `to_roman` and `from_roman`, you will need those two tables, so remember to add a calling sentence of `build_lookup_tables()`.
+
+see **source code** of [unit_testing][ut] and Roman Numeral utility [example1][roman1] and [example2][roman2]
 
 [ut]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/unit_testing.py
-[roman]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/roman2.py
+[roman1]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/roman2.py
+[roman2]:https://github.com/star-du/star-du.github.io/blob/master/sourcefile/roman3.py
