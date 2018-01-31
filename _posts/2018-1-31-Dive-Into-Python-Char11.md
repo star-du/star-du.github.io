@@ -50,7 +50,7 @@ reading and appending is achieved through the mode parameter 'w' and 'a'.
 What if we want to read something like a picture? The same old tricks shall work, except that the mode parameter should now be `rb`, `wb`, or `ab`;
 
 But we can even read things beyond files. By using `StringIo` class in `io` module, we create an instance of theclass and pass it the string you want to use as your “file” data.
-~~~Python
+~~~python
 >>> a_string = 'PapayaWhip is the new black.'
 >>> import io
 >>> a_file = io.StringIO(a_string)
@@ -68,7 +68,7 @@ the stderr pipe.
 If that is understood, which is to say the nature of `print()` is adding a carriage return and calling `sys.stdout.write`[^1], we can direct a different output place, with a custom _context manager_.
 
 A class is a context-manager as long as it has `__enter__()` and `__exit__()` methods.
-~~~Python
+~~~python
 class RedirectStdoutTo:
     def __init__(self,out_new):
         self.out_new = out_new
@@ -81,16 +81,16 @@ class RedirectStdoutTo:
         sys.stdout = self.out_old
 ~~~
 Then we can use with statement to automatically call `__enter__()` and `__exit__()`. A bit tricky though, is that we can use with statement to take _a comma-separated list of contexts_.
-~~~Python
+~~~python
 with open('out.log', mode='w', encoding='utf-8') as a_file, RedirectStdoutTo(a_file):
 print('B')
 ~~~
 The first context listed is the “outer” block; the last one listed is the “inner” block. Rewrite it would be like
-~~~Python
+~~~python
 with open('out.log', mode='w', encoding='utf-8') as a_file:
     with RedirectStdoutTo(a_file):
         print('B')
 ~~~
 
-[^1]:
-`sys.stdout` and `sys.stderr` are stream objects, but they are write-only. Attempting to call their `read()` method will always raise an IOError.
+
+[^1]:  `sys.stdout` and `sys.stderr` are stream objects, but they are write-only. Attempting to call their `read()` method will always raise an IOError.
