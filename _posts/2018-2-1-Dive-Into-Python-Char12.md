@@ -6,11 +6,10 @@ category: coding
 tags: [python, note-taking]
 ---
 ### using python to parse xml
-![xml]
+![xml]{: height="36px" width="36px} is not something we're that familiar with,
 
 
 
 
 
 [xml]:../sourcefile/file-icon-xml.png
-{: height="18px" width="18px"}
