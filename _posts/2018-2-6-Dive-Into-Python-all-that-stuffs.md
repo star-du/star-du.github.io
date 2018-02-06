@@ -1,6 +1,6 @@
 ---
 layout: post
-teaser:
+teaser: The book comes nearer to its end, and I hope to dig more things useful by this little charpter.
 title: Dive into python 3 stuffs and appendix
 category: coding
 tags: [python, note-taking]
