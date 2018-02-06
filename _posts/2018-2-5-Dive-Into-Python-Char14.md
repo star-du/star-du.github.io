@@ -11,14 +11,14 @@ Data, usually in the forms of XML or JSON, is built and stored statically or gen
 
 As is described, HTTP clients should support five features:
 - caching: `Cache-Control` `publicExpires` headers
- - brower local cache
- - caching proxy
+  - brower local cache
+  - caching proxy
 - last-modified checking: `Last-Modified` header
 - ETag checking: `ETag` header (it changes every time the data changes)
 - compression: client-side includes `Accept-encoding` head to list the compression data algorithms you support, server side includes `Content-encoding`
 - Redirects: status-code header
- - 302: temporary redirect
- - 301: permanenet redirect
+  - 302: temporary redirect
+  - 301: permanenet redirect
 
 the http web service use simple lines like `GET`, `POST`,`PUT` and `DELETE`. The `httplib2` supports features like caching and ETag checking etc., and is recommended by the author. For certain reasons, much of the tutorials haven't been fully followed, so I will take down as much as I'm capable of.
 
