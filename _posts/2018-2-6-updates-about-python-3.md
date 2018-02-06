@@ -38,8 +38,26 @@ L = list(filter(lambda n: n % 2 == 1, range(1,20)))
 ~~~
 (see manual of [list.sort()][sort])
 
+#### decorators, the use of `@property`
+<b>decorator</b>: A function returning another function, usually applied as a function transformation using the `@wrapper` syntax.
 
+for example: adding `@classmethod` before defining a method in class will transform that method into a classmethod
+~~~python
+class C:
+    @classmethod
+    def f(cls, arg1, arg2, ...): ...
+~~~
+It can be called either on the class (such as C.f()) or on an instance (such as C().f()). The instance is ignored except for its class.
+
+It is equal to
+~~~python
+def f(self, arg1, arg2):...
+f = classmethod(f)
+~~~
+<b>More help [here][bop] and [here][man].</b>
 
 
 [lamda]:https://docs.python.org/3/reference/expressions.html#lambda
 [sort]:https://docs.python.org/3/library/stdtypes.html?#list.sort
+[bop]:https://bop.mol.uno/18.more.html#decorator
+[man]:https://docs.python.org/3/library/functions.html?highlight=property#property
