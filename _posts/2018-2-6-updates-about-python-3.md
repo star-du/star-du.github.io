@@ -16,7 +16,7 @@ def <lambda>(arguments):
     return expression
 ~~~
 useage example:
-1. uses a lambda expression to return a function
++ uses a lambda expression to return a function
 
 ~~~python
 def is_odd(n):
@@ -24,12 +24,12 @@ def is_odd(n):
 
 L = list(filter(is_odd, range(1, 20)))
 ~~~
-is equal to
+  is equal to
 ~~~python
 L = list(filter(lambda n: n % 2 == 1, range(1,20)))
 ~~~
 
-2. pass a small function as an argument
++ pass a small function as an argument
 ~~~python
 >>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
 >>> pairs.sort(key=lambda pair: pair[1])
