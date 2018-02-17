@@ -203,6 +203,62 @@ class Screen(object):
     def resolution(self):
         return self._width * self._height
 ~~~
+#### more about list
+we can use lists as _stacks_ as well as _queue_, which makes it possible both “last-in, first-out” and “first-in, first-out”, although the latter is less efficient.
+~~~python
+>>> stack = [3, 4, 5]
+>>> stack.append(6)
+>>> stack
+[3, 4, 5, 6]
+>>> stack.pop()
+6
+~~~
+To implement a queue, use `collections.deque` which was designed to have fast appends and pops from both ends.
+~~~python
+>>> from collections import deque
+>>> queue = deque(["Eric", "John", "Michael"])
+>>> queue.append("Terry")           # Terry arrives
+>>> queue.append("Graham")          # Graham arrives
+>>> queue.popleft()                 # The first to arrive now leaves
+'Eric'
+>>> queue.popleft()                 # The second to arrive now leaves
+'John'
+>>> queue                           # Remaining queue in order of arrival
+deque(['Michael', 'Terry', 'Graham'])
+~~~
+list comprehension is definitely flexible:
+~~~python
+>>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+>>> # flatten a list using a listcomp with two 'for'
+>>> vec = [[1,2,3], [4,5,6], [7,8,9]]
+>>> [num for elem in vec for num in elem]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+~~~
+The sequence of `for` in the second example should not be reversed, for the elem needs to be defined first by `for elem in vec`.
+
+In case I might forget, to **unpack** argument list, we use the `*` operator, likewise, use `**`-operator for dictionaries. See [here][unpack]
+
+_Looping_ through a sequence is easy wiht `for` statements,  and if we want the position index as well, we can use the `enumerate()` function
+~~~python
+>>> for i, v in enumerate(['tic', 'tac', 'toe']):
+...     print(i, v)
+...
+0 tic
+1 tac
+2 toe
+~~~
+to loop over two or more sequences, use `zip` to pair, `zip` yields an iterator
+~~~python
+>>> questions = ['name', 'quest', 'favorite color']
+>>> answers = ['lancelot', 'the holy grail', 'blue']
+>>> for q, a in zip(questions, answers):
+...     print('What is your {0}?  It is {1}.'.format(q, a))
+~~~
+For more about `zip`, see <b>[here][zip]</b>
+
+for the difference between list and tuple, the [docs][tuple_seq] give us some hints:
+>Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements are usually homogeneous and are accessed by iterating over the list.
 
 [lamda]:https://docs.python.org/3/reference/expressions.html#lambda
 [sort]:https://docs.python.org/3/library/stdtypes.html?#list.sort
@@ -213,3 +269,6 @@ class Screen(object):
 [l2]:https://www.learnpython.org/en/Decorators
 [lxf2]:https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143186781871161bc8d6497004764b398401a401d4cce000
 [stack]:https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work
+[tuple_seq]:https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+[unpack]:https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists
+[zip]:https://docs.python.org/3/library/functions.html#zip
