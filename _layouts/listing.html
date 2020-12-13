@@ -11,6 +11,7 @@ layout: default
   {% endif %}
   {% assign label = page.path | split: '/' | last | split: '.' | first %}
 
+  {% comment %} 对于 tag ，则筛选所有 page.tags 包含有当前 tag 的label 的页面 {% endcomment %}
   {% assign pool = site.posts | where: filter, label %}
 
 {% elsif page.path == 'projects.html' %}
@@ -28,7 +29,6 @@ layout: default
 
 <main class="{{ item_type }} {{ item_type }}--{{ page_type }}" role="main">
   <h2 class="{{ item_type }}__heading {{ item_type }}--{{ page_type }}__heading">{{ page.title }}</h2>
-
   <ul class="{{ item_type }}__list {{ item_type }}--{{ page_type }}__list">
     {% for item in pool %}
       <li class="{{ item_type }}__entry {{ item_type }}--{{ page_type }}__entry">

@@ -33,27 +33,17 @@ nav_menu:
 
 # Objects listed here will appear on the /projects.html page.
 projects:
-  - title: Solana
-    teaser: A responsive blog template written. I shall pay special thanks to the original author of this template---Ryan Lue
-    url: https://github.com/rlue/jekyll-solana
-    role: Creator
-    category: Frontend Dev
-  - title: Cortana
-    teaser: A talking robot. Now available on Google Play?
-    url: https://play.google.com/store/apps/details?id=com.microsoft.cortana
+  - title: HUSTAU 小程序
+    teaser: 用于管理物资和场地，使用了“云开发”
+    url: https://github.com/star-du/cloud-mini-app
     role: Core Team
-    category: NLP
-  - title: Rihanna
-    teaser: Possibly another robot. Also available on Google Play.
-    url: https://play.google.com/store/music/artist/Rihanna?id=Arcw2m2ih45qntv3fufub25tyhu
-    role: Contributor
-    category: Algorithmic Composition
+    category: Dev
 
 #################
 # Site Settings #
 #################
 
-incremental: true
+incremental: false # turn off to avoid unexpected behaviors
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -61,7 +51,7 @@ exclude:
   - README.md
   - TODO.md
 
-permalink: /:collection/:path
+permalink: /:collection/:title
 
 collections:
   category: { output: true }
