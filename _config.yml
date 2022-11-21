@@ -5,7 +5,7 @@
 title: Star' s note                             # used in <title> tag & site header
 author: Star Du                        # used in a <meta> tag & /feed.xml
 description: ">A guy interested in too many things."
-slogan: Hack!Hack!Hack!                           # used in site header, beside title
+slogan:                            # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
 banner: /i/mountains.svg                    # used as background in site header
 url: https://star-du.github.io/           # used by plugins to generate feed.xml and sitemap.xml
@@ -18,18 +18,21 @@ nav_menu:
   - name: Posts
     url: /
     icon: /i/icons.svg#posts # icons should be 24x24 px.
-  - name: Projects
-    url: /projects
-    icon: /i/icons.svg#portfolio
+    #   - name: Projects
+    #     url: /projects
+    #     icon: /i/icons.svg#portfolio
   - name: GitHub
     url: https://github.com/star-du/star-du.github.io
     icon: /i/icons.svg#github
     outbound: true      # this key sets a link to open in a new window.
-  - name: Contact
-    scheme: mailto      # these keys enable email obfuscation.
-    handle: hello       # you know, to protect you from bots. (handle and domain
-    domain: github.com  # are separated in case bots crawl GitHub repos, too.)
-    icon: /i/icons.svg#email
+  - name: About
+    url: /about
+    icon: /i/icons.svg#posts 
+    #   - name: Contact
+    #     scheme: mailto      # these keys enable email obfuscation.
+    #     handle: hello       # you know, to protect you from bots. (handle and domain
+    #     domain: github.com  # are separated in case bots crawl GitHub repos, too.)
+    #     icon: /i/icons.svg#email
 
 # Objects listed here will appear on the /projects.html page.
 projects:
@@ -73,4 +76,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-paginate: 10
+paginate: 5
