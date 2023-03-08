@@ -77,3 +77,6 @@ plugins:
   - jekyll-sitemap
 
 paginate: 5
+
+feed:
+  posts_limit: 6
